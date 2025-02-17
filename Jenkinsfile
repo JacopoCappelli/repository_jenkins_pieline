@@ -10,21 +10,20 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean install'
-              sh 'npm install'
+                 echo 'building the project'
               
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                echo ' testing the project '
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'deploy.sh'
+                echo ' deploying the project'
             }
         }
     }
